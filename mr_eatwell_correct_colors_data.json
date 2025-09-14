@@ -1,0 +1,149 @@
+{
+  "header": {
+    "title": "NH35 vs SW200-1 Movement Guide",
+    "subtitle": "Choose the Perfect Heart for Your Next Timepiece",
+    "brand_tagline": "Watches That Start Conversations",
+    "colors": {
+      "primary": "#002D13",
+      "secondary": "#CC6800",
+      "background": "#FFFFF8",
+      "surface": "#FFFFFF",
+      "text_primary": "#002D13",
+      "text_secondary": "#FFFFF8",
+      "accent": "#CC6800",
+      "border": "#002D13",
+      "nh35_color": "#002D13",
+      "sw200_color": "#CC6800"
+    }
+  },
+  "intro_section": {
+    "headline": "Every Great Watch Starts with a Great Movement",
+    "description": "Whether you're selecting your next conversation starter or understanding what makes your current favorite tick, this guide breaks down everything you need to know about these two legendary movements."
+  },
+  "movements": {
+    "NH35": {
+      "origin": {
+        "country": "Japan",
+        "flag": "\ud83c\uddef\ud83c\uddf5",
+        "heritage": "Seiko precision engineering"
+      },
+      "positioning": "The Reliable Workhorse",
+      "description": "Built for daily wear and real-world performance",
+      "color_theme": "#002D13",
+      "basic_specs": {
+        "type": "Automatic, self-winding",
+        "diameter": "27.4mm",
+        "height": "5.32mm",
+        "jewels": "24",
+        "beat_rate": "21,600 vph (3 Hz)",
+        "power_reserve": "~41 hours",
+        "accuracy": "Consistent daily performance",
+        "weight": "13.1g"
+      },
+      "why_choose": [
+        "You want rock-solid reliability for daily wear",
+        "You prefer proven Japanese engineering",
+        "You're looking for worry-free ownership",
+        "You appreciate robust, no-nonsense performance",
+        "You want maximum longevity from your timepiece",
+        "You plan to wear it every day without babying it"
+      ],
+      "real_world_benefits": [
+        "Handles daily bumps and knocks",
+        "Consistent timekeeping you can trust",
+        "Low-maintenance ownership experience",
+        "Proven track record across millions of watches",
+        "Easy serviceability anywhere in the world"
+      ]
+    },
+    "SW200-1": {
+      "origin": {
+        "country": "Switzerland",
+        "flag": "\ud83c\udde8\ud83c\udded",
+        "heritage": "Swiss horological tradition"
+      },
+      "positioning": "The Swiss Precision Master",
+      "description": "Refined engineering for the discerning collector",
+      "color_theme": "#CC6800",
+      "basic_specs": {
+        "type": "Automatic, self-winding",
+        "diameter": "25.6mm",
+        "height": "4.6mm",
+        "jewels": "26",
+        "beat_rate": "28,800 vph (4 Hz)",
+        "power_reserve": "~38-41 hours",
+        "accuracy": "Swiss precision standards",
+        "weight": "11.4g"
+      },
+      "why_choose": [
+        "Swiss heritage matters to you",
+        "You want the smoothest possible second hand sweep",
+        "You're building a premium collection",
+        "Precision and refinement are priorities",
+        "You appreciate superior finishing details",
+        "You want flexible design possibilities"
+      ],
+      "real_world_benefits": [
+        "Silky-smooth second hand sweep",
+        "Swiss Made prestige and heritage",
+        "Superior finishing you can see and feel",
+        "Multiple precision grades available",
+        "Flexible design options for unique builds"
+      ]
+    }
+  },
+  "comparison_sections": {
+    "daily_experience": {
+      "title": "What You'll Notice Wearing It",
+      "nh35_highlights": [
+        "Solid, substantial feel on the wrist",
+        "Reliable daily performance",
+        "Distinctive tick you can hear",
+        "Robust winding action"
+      ],
+      "sw200_highlights": [
+        "Incredibly smooth second hand sweep",
+        "Refined, precise winding feel",
+        "Swiss craftsmanship details",
+        "Whisper-quiet operation"
+      ]
+    },
+    "long_term_ownership": {
+      "title": "Years Down the Road",
+      "nh35_story": "Your NH35 will be the reliable companion that just keeps going. It's built to handle whatever life throws at it, maintaining consistent performance for decades.",
+      "sw200_story": "Your SW200-1 represents Swiss watchmaking heritage. It's a movement that appreciates in character over time, becoming a treasured part of your collection."
+    }
+  },
+  "technical_performance": {
+    "categories": [
+      "Sweep Smoothness",
+      "Daily Accuracy",
+      "Shock Resistance",
+      "Long-term Reliability",
+      "Service Convenience",
+      "Build Quality Feel",
+      "Heritage Value",
+      "Versatility"
+    ],
+    "nh35_ratings": [
+      7,
+      8,
+      9,
+      9,
+      9,
+      7,
+      7,
+      9
+    ],
+    "sw200_ratings": [
+      10,
+      9,
+      7,
+      8,
+      6,
+      9,
+      10,
+      8
+    ]
+  }
+}

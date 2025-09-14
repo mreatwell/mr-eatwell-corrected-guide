@@ -1,0 +1,183 @@
+/* Minimal overrides layered after CDN styles. Keep scope tight. */
+
+/* Professional theme adjustments */
+:root {
+  --me-surface: #FFFFF8;
+  --me-text: #002D13;
+  --me-radius: 12px;
+  --me-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  /* shadcn-inspired tokens */
+  --border: rgba(0,0,0,0.12);
+  --muted: rgba(0,0,0,0.04);
+  --muted-foreground: rgba(0,45,19,0.7);
+  --ring: rgba(31,184,205,0.35);
+}
+
+/* Brand typography */
+html { font-family: 'FKGroteskNeue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+h1, h2, h3 { font-weight: 700; letter-spacing: .005em; }
+body { color: var(--me-text); line-height: 1.6; }
+
+/* shadcn/reactbits-inspired primitives (no deps) */
+.card { background: var(--me-surface); border: 1px solid var(--border); border-radius: var(--me-radius); box-shadow: var(--me-shadow); }
+.card-header { padding: 16px; border-bottom: 1px solid var(--border); font-weight: 600; }
+.card-body { padding: 16px; }
+
+.btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius: 10px; font-weight:600; border:1px solid var(--border); background: var(--me-surface); color: var(--me-text); transition: all .15s ease; }
+.btn:hover { background: var(--muted); }
+.btn:focus-visible{ outline: none; box-shadow: 0 0 0 3px var(--ring); }
+.btn-primary { background:#1FB8CD; border-color:#1FB8CD; color:#002D13; }
+.btn-primary:hover { filter: brightness(.95); }
+.btn-ghost { background: transparent; border-color: transparent; }
+.btn-ghost:hover { background: var(--muted); }
+
+.badge { display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:9999px; border:1px solid var(--border); background: var(--me-surface); color: var(--me-text); font-weight:600; font-size: 13px; }
+.badge-soft { background: rgba(31,184,205,0.12); border-color: rgba(31,184,205,0.25); color:#006b2f; }
+
+.muted { color: var(--muted-foreground); }
+.kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; border:1px solid var(--border); background: var(--me-surface); padding:2px 6px; border-radius:6px; font-size: 12px; }
+
+/* tables */
+.comparison-table .table-header{ background: var(--muted); border: 1px solid var(--border); }
+.comparison-table .table-row{ border-bottom: 1px solid var(--border); }
+
+/* lists */
+ul { margin: 0 0 12px 0; }
+li { margin: 4px 0; }
+
+/* 1) Improve legibility of translucent cards */
+.battle-card,
+.movement-card,
+.performance-card,
+.summary-card {
+  background: var(--me-surface) !important;
+  border-radius: var(--me-radius) !important;
+  box-shadow: var(--me-shadow) !important;
+}
+
+/* Headers/hero panels */
+.header .container > *,
+.table-title,
+.section-title {
+  color: #002D13 !important;
+}
+
+/* Improve legibility inside cards */
+.experience-card, .decision-card, .specs-table-container, .performance-section .chart-container {
+  color: #002D13;
+  line-height: 1.55;
+}
+.experience-card li, .decision-card li { color: #002D13; }
+.decision-card .decision-icon, .experience-card .experience-icon { filter: none; }
+
+/* Headings contrast */
+.daily-experience-section .section-title.with-accent,
+.performance-section .section-title.with-accent,
+.decision-section .section-title.with-accent,
+.ownership-section .section-title.with-accent {
+  color: #002D13 !important;
+}
+
+/* 2) Replace garbled pseudo-element icons if present */
+.gear::before { content: "⚙️" !important; }
+.battle-icon::before { content: "⚡"; }
+
+/* 3) Chart container responsive canvas */
+.chart-container canvas#performanceChart {
+  width: 100% !important;
+  height: 420px !important;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
+}
+
+.performance-section .chart-container {
+  background: var(--me-surface);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--me-shadow);
+}
+.performance-section .chart-container .chart-background { border-radius: 12px; }
+
+/* Custom legend styling */
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background: rgba(255,255,248,0.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-weight: 600;
+  color: #002D13;
+}
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+.legend-dot.nh35 { background: #1FB8CD; }
+.legend-dot.sw200 { background: #FFC185; }
+
+/* Comparison tables polish to match reference layout */
+.specs-tables-grid { gap: 20px; }
+.specs-table-container { background: var(--me-surface); border-radius: var(--me-radius); box-shadow: var(--me-shadow); overflow: hidden; }
+.specs-table-container .table-header-accent { display: none; }
+.specs-table-container .table-title { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.comparison-table .table-header,
+.comparison-table .table-row { display: grid; grid-template-columns: 1.2fr 1fr 1fr; align-items: center; column-gap: 12px; }
+.comparison-table .table-header { font-weight: 700; color: #002D13; padding: 10px 12px; background: rgba(0,0,0,0.04); border-radius: 10px; margin-bottom: 6px; }
+.comparison-table .table-row { padding: 10px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); background: transparent; }
+.comparison-table .table-row:hover { background: rgba(0,0,0,0.025); }
+.comparison-table .table-row:last-child { border-bottom: 0; }
+.comparison-table .spec-column { font-weight: 600; color: #002D13; }
+.comparison-table .nh35-column,
+.comparison-table .sw200-column { justify-self: end; font-weight: 600; color: #002D13; }
+.comparison-table .sw200-column.advantage,
+.comparison-table .nh35-column.advantage { background: rgba(40,167,69,0.1); border: 1px solid rgba(40,167,69,0.4); padding: 4px 8px; border-radius: 9999px; }
+
+/* Prevent stray white bars */
+.comparison-table, .specs-table-container, .specs-tables-grid { background: transparent; }
+
+/* Layout spacing refinements */
+.movement-overview-section .container, .specifications-section .container, .performance-section .container, .daily-experience-section .container, .decision-section .container, .ownership-section .container { padding-top: 24px; padding-bottom: 24px; }
+.movement-overview-flex { display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; }
+.experience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.experience-card { background: var(--me-surface); border-radius: var(--me-radius); padding: 16px; box-shadow: var(--me-shadow); }
+.experience-card h3 { margin-bottom: 8px; color: #002D13; }
+.experience-list { margin: 0; padding-left: 16px; }
+.experience-list { list-style: disc; }
+.experience-list li::marker { color: #002D13; }
+
+.decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.decision-card { background: var(--me-surface); border-radius: var(--me-radius); padding: 16px; box-shadow: var(--me-shadow); }
+.decision-list { margin: 0; padding-left: 16px; }
+.decision-card h3 { color: #002D13; }
+.decision-list { list-style: disc; }
+.decision-list li::marker { color: #002D13; }
+
+/* VS badge tweaks */
+.vs-divider .vs-text { box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+/* Remove emoji-driven UI affordances */
+.vs-spark, .experience-icon, .decision-icon, .battle-icon, .subtitle-icon, .verdict-icon, .tagline-crown, .flag { display: none !important; }
+
+/* 4) Reduce motion density on small screens */
+@media (max-width: 767px) {
+  .floating-particles { display: none; }
+  .header-gradient-bg { animation: none !important; }
+  .gear { opacity: 0.2; }
+}
+
+/* 5) Ensure VS badge doesn’t overlap content on mobile */
+@media (max-width: 767px) {
+  .vs-text { transform: scale(0.8) !important; }
+}
+
+/* 6) Accessibility: clear focus ring visibility */
+:focus-visible { outline: 2px solid #1FB8CD; outline-offset: 3px; }
+
+
