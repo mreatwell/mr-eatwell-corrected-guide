@@ -85,7 +85,8 @@ li { margin: 4px 0; }
 /* 3) Chart container responsive canvas */
 .chart-container canvas#performanceChart {
   width: 100% !important;
-  height: 420px !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1; /* keep square to avoid distortion */
   max-width: 900px;
   display: block;
   margin: 0 auto;

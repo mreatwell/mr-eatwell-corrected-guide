@@ -228,6 +228,8 @@ async function initPerformanceChart() {
         options: {
             responsive: true,
             maintainAspectRatio: true,
+            aspectRatio: 1, // keep radar chart square
+            resizeDelay: 150,
             plugins: {
                 legend: { display: false },
                 tooltip: {
