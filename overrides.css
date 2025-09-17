@@ -187,6 +187,17 @@ li { margin: 4px 0; }
 .battle-card, .movement-card, .summary-card { padding: 8px; }
 .summary-item { line-height: 1.65; }
 
+/* Years Down the Road – improve readability with pale green background */
+.ownership-section {
+  position: relative;
+  background: linear-gradient(180deg, #F1FFF4 0%, #FAFFFC 100%) !important; /* very pale green */
+  color: var(--me-text) !important;
+}
+.ownership-section h2,
+.ownership-section h3,
+.ownership-section p,
+.ownership-section .ownership-year { color: var(--me-text) !important; }
+
 /* 4) Reduce motion density on small screens */
 @media (max-width: 767px) {
   .floating-particles { display: none; }
