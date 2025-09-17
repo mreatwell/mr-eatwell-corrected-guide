@@ -21,7 +21,7 @@ body { color: var(--me-text); line-height: 1.6; }
 
 /* Global background — pale orange → pale green */
 body {
-  background: linear-gradient(135deg, #FFF3E6 0%, #F1FFF4 100%) !important;
+  background: linear-gradient(135deg, #0E3A24 0%, #F1FFF4 100%) !important; /* dark green → pale green */
 }
 
 /* match site container width */
